@@ -1,0 +1,86 @@
+<script>
+
+/*
+Write a function that returns the area of a circle, given the radius.
+Hints: The area of a circle is "π r 2". For π, use Math.PI.
+*/
+var circle = function (radius){
+	return Math.PI * radius * radius;
+}
+
+console.log(circle(5))  //return should be  78.53981633974483
+console.log(circle(8))  //return should be 201.06192982974676
+
+/*
+Given a string, create a function that returns the last character in that string.
+example:
+"cattywampus" --> "s"
+*/
+
+var lastLetter = function (word){
+	return word [word.length - 1]
+}
+
+console.log(lastLetter("unicorn")) // return should be n
+console.log(lastLetter("pinkPanter")) // return should be r
+
+/*
+Write a function that takes in one parameter "length" and prints out that many stars.
+example:
+3 --> ***
+5 --> *****
+*/
+
+
+var numberStars = function (stars){
+	var output = "";
+	for (var i = 0;  i < stars; i++) {
+		output += "*";
+	}
+	return output;
+};
+
+console.log(numberStars(5)); // output should be *****
+console.log(numberStars(8));  // output should be ********
+
+// Now, write a function that takes in one parameter "length" and prints out a square of stars.
+
+var numberStars = function (stars){
+	var line = "";
+	for (var i = 0;  i < stars; i++) {
+		line += "*";
+	}
+	line += '\n'
+	var square = ''
+	for (var i = 0;  i < stars; i++) {
+		square += line;
+	}
+
+	return square;
+};
+
+console.log(numberStars(5));
+console.log(numberStars(8));
+
+// Given an array of integers, write a function that finds the average and returns it.
+
+// examples:
+// [1,2,3] --> 2
+// [1,2,4] --> 2.3333
+
+var averageomatic = function (array){
+		var total = 0;
+		for(i=0; i<array.length; i++){
+			total = total + array[i]
+		}
+		console.log (total / array.length)
+	}
+	averageomatic([2,3,5])   // output should be 3,333333....5
+
+
+</script>
+
+
+
+
+
